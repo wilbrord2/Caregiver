@@ -1,9 +1,17 @@
-import React from 'react'
+import { useNavigate } from "react-router-dom";
 
 const LoginPage = () => {
+  const navigate = useNavigate();
   return (
-    <div>Login</div>
-  )
-}
+    <div className="flex items-center justify-center w-full h-screen">
+      <button
+        onClick={() => navigate("/homepage")}
+        className="btn-secondary w-1/3"
+      >
+        Login
+      </button>
+    </div>
+  );
+};
 
-export default LoginPage
+export default LoginPage;

@@ -1,9 +1,11 @@
+import {useNavigate } from "react-router-dom";
 import HeroSection from "../Components/Homepage/hero";
 import TestimonialCard from "../Components/Homepage/testimonial";
 import About_Us_image from "../assets/about-us-image.svg";
 import registerImage from "../assets/register-image.svg";
 import { user } from "../costants";
 const HomePage = () => {
+  const navigate = useNavigate();
   return (
     <section>
       <HeroSection />
@@ -49,7 +51,10 @@ const HomePage = () => {
             current recruitment needs and explain how 25x Caregivers Recruitment
             can amplify the quality and quantity of your caregiving staff.
           </span>
-          <button className="btn-secondary w-full lg:w-1/2">
+          <button
+            onClick={() => navigate("/schedule")}
+            className="btn-secondary w-full lg:w-1/2"
+          >
             Schedule a discovery call
           </button>
         </div>

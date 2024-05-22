@@ -1,7 +1,9 @@
 import HeroImage1 from "../../assets/hero-image.svg";
 import HeroImage2 from "../../assets/caregiver-image-1.jpg";
+import {useNavigate } from "react-router-dom";
 
 const HeroSection = () => {
+  const navigate = useNavigate();
   return (
     <div className="w-full flex flex-col lg:flex-row items-center justify-between gap-2">
       <div className="w-full lg:w-1/2  flex flex-col py-4 px-10 lg:px-20 ">
@@ -17,7 +19,10 @@ const HeroSection = () => {
             Our recruitment strategy ensures a 25x higher turnout of qualified
             candidates, setting a new standard in caregiving staffing.
           </span>
-          <button className="btn-secondary w-full md:w-1/2">
+          <button
+            onClick={() => navigate("/schedule")}
+            className="btn-secondary w-full md:w-1/2"
+          >
             Schedule a discovery cal
           </button>
           <span className="text-sm">
