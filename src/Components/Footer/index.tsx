@@ -1,14 +1,19 @@
+import { useNavigate } from "react-router-dom";
 import AppLogo from "../../assets/appLogo-white.svg";
 import { Icon } from "@iconify/react";
 
 const Footer = () => {
+  const navigate = useNavigate();
   return (
     <div className="bg-btnPrimary mt-4 px-10 lg:px-20 text-white">
       <div className="flex flex-col max-sm:pb-4 sm:flex-row justify-between w-full border-b">
-        <div className="h-20 w-52 flex items-center">
+        <div
+          onClick={() => navigate("/homepage")}
+          className="h-20 w-52 flex items-center cursor-pointer"
+        >
           <img src={AppLogo} alt="caregiver image" />
         </div>
-        <div className="flex flex-row gap-4 items-center">
+        <div className="flex flex-row gap-4 items-center cursor-pointer">
           <Icon icon="mdi:linkedin" width="35" height="35" color="white" />
           <Icon
             icon="fa-brands:github-square"
