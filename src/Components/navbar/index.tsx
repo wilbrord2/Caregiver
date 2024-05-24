@@ -1,15 +1,23 @@
 import { useNavigate } from "react-router-dom";
 import AppLogo from "../../assets/appLogo.svg";
-import { useAppContext } from "../../context";
+import { useState } from "react";
 
 const Navbar = () => {
   const navigate = useNavigate();
-  const { onNavScroll } = useAppContext();
+  const [navbar, setNavbar] = useState(false);
+  const changeNavbar = () => {
+    if (window.scrollY >= 40) {
+      setNavbar(true);
+    } else {
+      setNavbar(false);
+    }
+  };
+  window.addEventListener("scroll", changeNavbar);
   return (
     <div
       className={`${
-        onNavScroll ? "bg-[#F7F7F7]" : ""
-      } fixed w-full flex flex-row items-center justify-between px-10 lg:px-20`}
+        navbar ? "bg-[#F7F7F7] ease-in " : ""
+      }  sticky top-0 w-full flex flex-row items-center justify-between px-10 lg:px-20 z-50`}
     >
       <div
         onClick={() => navigate("/homepage")}

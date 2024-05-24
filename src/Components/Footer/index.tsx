@@ -5,7 +5,8 @@ import { Icon } from "@iconify/react";
 const Footer = () => {
   const navigate = useNavigate();
   return (
-    <div className="bg-btnPrimary mt-4 px-10 lg:px-20 text-white">
+    <div className="bg-btnPrimary mt-4 px-10 lg:px-20 text-white ">
+      <div className="mx-auto max-w-[1700px]">
       <div className="flex flex-col max-sm:pb-4 sm:flex-row justify-between w-full border-b">
         <div
           onClick={() => navigate("/homepage")}
@@ -47,6 +48,7 @@ const Footer = () => {
           All Rights Reserved
         </span>
         <span>1 KN 3 Road, Le Prestige House, Rwanda</span>
+      </div>
       </div>
     </div>
   );

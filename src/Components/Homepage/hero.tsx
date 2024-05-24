@@ -30,7 +30,7 @@ const HeroSection = () => {
           </span>
         </div>
       </div>
-      <div className="hidden lg:block w-1/2">
+      <div className="hidden lg:block w-1/2 relative -top-20">
         <img className="w-full h-full" src={HeroImage1} alt="customer-image" />
       </div>
       <div className="block lg:hidden w-full">

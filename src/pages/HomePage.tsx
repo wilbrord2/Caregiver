@@ -9,7 +9,7 @@ const HomePage = () => {
   return (
     <section>
       <HeroSection />
-      <div className="homepageSection bg-bgPrimaryColor">
+      <div className="w-full sm:w-[90%] homepageSection bg-bgPrimaryColor">
         <div className="p-4 md:p-10 w-full md:w-1/2">
           <img
             className=" w-full h-full"
@@ -66,7 +66,7 @@ const HomePage = () => {
           />
         </div>
       </div>
-      <div className="w-[90%] rounded-3xl p-4 md:px-20 md:py-16  my-10 mx-auto bg-gradient-to-b from-[#ED90CF] to-[#3C8CDE]">
+      <div className="w-full sm:w-[90%] rounded-3xl p-4 md:px-20 md:py-16  my-10 mx-auto bg-gradient-to-b from-[#ED90CF] to-[#3C8CDE]">
         <h1 className="heading2 text-white">What Users Think</h1>
         <div className="mt-8">
           <TestimonialCard user={user} />
