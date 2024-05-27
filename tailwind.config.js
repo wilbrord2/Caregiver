@@ -3,18 +3,21 @@ export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     extend: {
+      fontFamily: {
+        nunito: ["Nunito Sans", "sans-serif"],
+        display: ["Playfair Display"],
+      },
       backgroundImage: {
         bgImage: "url('/src/assets/bg-image.svg')",
       },
 
-      colors: { 
-        btnPrimary: "#3C8CDE",
-        bgPrimaryColor:"#A6A6DE"
+      colors: {
+        btnPrimary: "#292A6B",
+        bgPrimaryColor: "#F7F7F7",
+        defaultOrange: "#FFB74D",
+      },
     },
-    },
-    fontFamily: {
-
-    }
+    fontFamily: {},
   },
   plugins: [],
 };

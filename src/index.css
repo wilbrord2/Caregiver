@@ -1,7 +1,8 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap');
 @layer components {
 .btn-primary{
     @apply  cursor-pointer border border-black font-medium py-2 px-3 rounded-md hover:bg-btnPrimary hover:text-white hover:border-white
@@ -10,12 +11,16 @@
    @apply bg-btnPrimary cursor-pointer  text-white border font-medium py-2 px-3 rounded-md hover:bg-inherit hover:text-black hover:border-black
  }
  .heading1{
-  @apply font-bold text-5xl
+  @apply font-bold text-5xl font-display
  }
  .heading2{
-  @apply font-bold text-3xl
+  @apply font-bold text-3xl font-display
  }
  .homepageSection{
-  @apply flex flex-col md:flex-row items-center justify-center gap-2 md:gap-8 w-[90%] rounded-3xl my-10 mx-auto
+  @apply flex flex-col md:flex-row items-center justify-center gap-2  w-[90%]  my-10 mx-auto
  }
+ body{
+  @apply font-nunito
+ }
+
 }

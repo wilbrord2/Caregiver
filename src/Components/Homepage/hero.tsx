@@ -1,17 +1,16 @@
 import HeroImage1 from "../../assets/hero-image.svg";
-import HeroImage2 from "../../assets/caregiver-image-1.jpg";
-import {useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 const HeroSection = () => {
   const navigate = useNavigate();
   return (
-    <div className="w-full flex flex-col lg:flex-row items-center justify-between gap-2">
-      <div className="w-full lg:w-1/2  flex flex-col py-4 px-10 lg:px-20 ">
+    <div className="w-[90%] mx-auto flex flex-col lg:flex-row items-center justify-between gap-2">
+      <div className="w-full lg:w-1/2  flex flex-col p-4 ">
         <h1 className="heading1">
           Stop wasting time,
           <br /> Trying to find applicants
         </h1>
-        <span className="pt-2 pb-6 font-medium text-xl">
+        <span className="pt-2 pb-6 font-medium text-xl text-btnPrimary">
           25x your Caregiver Recruiting today!
         </span>
         <div className="flex flex-col gap-4 font-sans">
@@ -23,18 +22,15 @@ const HeroSection = () => {
             onClick={() => navigate("/schedule")}
             className="btn-secondary w-full md:w-1/2"
           >
-            Schedule a discovery cal
+            Schedule a discovery call
           </button>
-          <span className="text-sm">
+          <span className="text-sm text-defaultOrange">
             - Let&apos;s enhance your staffing strategy together.
           </span>
         </div>
       </div>
-      <div className="hidden lg:block w-1/2 relative -top-20">
-        <img className="w-full h-full" src={HeroImage1} alt="customer-image" />
-      </div>
-      <div className="block lg:hidden w-full">
-        <img className="w-full h-full" src={HeroImage2} alt="customer-image" />
+      <div className="w-full h-full lg:w-1/2 flex items-start bg-defaultOrange">
+        <img className="" src={HeroImage1} alt="customer-image" />
       </div>
     </div>
   );
