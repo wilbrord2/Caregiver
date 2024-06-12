@@ -14,8 +14,8 @@ export type joinedUsersType = {
 export type joinedUsers = {
   emailId:string, 
   email:string,
-   SubscribedAt:string
-  
+  SubscribedAt:string,
+  optional?:string
 };
 export enum PresetTimeFrameType {
   "default" = "",
