@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import { useTranslation } from "react-i18next";
 
 type Props = {
   admin?:boolean;
@@ -23,7 +22,6 @@ function DatePicker({
   setEndDate,
 }: Props) {
   const [error, setError] = useState(false);
-  const { t } = useTranslation();
 
   const handleDate = (myDate: Date | string) => {
     const originalDate = new Date(myDate);
@@ -56,12 +54,12 @@ function DatePicker({
     >
       <div className={`${admin ? "w-[80%]":"w-[80%] md:w-[60%] lg:w-[30%]"}  relative pt-4 pb-8  top-1/4 border dark:border-defaultGray  bg-white dark:bg-defaultBlack rounded-md  dark:border-opacity-20 m-auto  items-center justify-evenly flex flex-col gap-4`}>
         <div className="w-full text-sm font-bold mb-2 items-center flex justify-center ">
-          <h1>{t("crowdfund.datepicker.title")}</h1>
+          <h1>Pick two different dates</h1>
         </div>
         <div className="w-full items-center justify-evenly flex flex-col flex-wrap gap-8 ">
           <div className="w-[90%] items-center justify-around flex flex-row gap-2 ">
             <label htmlFor="from" className=" font-bold w-[20%]">
-              {t("crowdfund.datepicker.from")}:
+              From:
             </label>
             <input
               type="date"
@@ -81,7 +79,7 @@ function DatePicker({
           </div>
           <div className="w-[90%] items-center  flex flex-row gap-2">
             <label htmlFor="to" className="font-bold w-[20%]">
-              {t("crowdfund.datepicker.to")}:
+              To:
             </label>
             <input
               type="date"
@@ -115,7 +113,7 @@ function DatePicker({
               setError(false);
             }}
           >
-            {t("crowdfund.datepicker.cancel")}{" "}
+           Cancel
           </button>
           <button
             className="px-6 p-2 bg-defaultGreen text-white font-bold  rounded-full  disabled:cursor-not-allowed disabled:bg-opacity-20"
@@ -124,7 +122,7 @@ function DatePicker({
               startDate !== "" && endDate !== "" && !error ? false : true
             }
           >
-            {t("crowdfund.datepicker.apply")}{" "}
+            Apply
           </button>
         </div>
       </div>
